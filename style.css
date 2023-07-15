@@ -1,0 +1,173 @@
+:root{
+    font-size: 24px;
+    font-family: monospace;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:hsl(185, 41%, 84%) ;
+    flex-direction: column;
+    gap: 4rem;
+}
+.logo{
+    width: 3rem;
+}
+.container{
+    width: 100%;
+    max-width: 33rem;
+    padding: 1.2rem;
+    background-color: hsl(0,0%,100%);
+    border-radius: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.inputField{
+    position: relative;
+    width: 100%;
+    height: 3rem;
+}
+.inputField input{
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    padding: .4rem;
+    background-color: hsla(180, 14%, 89%, 0.774);
+    bottom: 0;
+    border: none ;
+    border-radius: .2rem;
+    text-align: right;
+    font-weight: 700;
+    color:hsl(183, 100%, 15%) ;
+    outline-color: hsl(172, 67%, 45%);
+    font-size: .9rem;
+}
+.inputField label, .inputField img{
+    position: absolute;
+}
+.inputField label{
+    font-size: .7rem;
+    font-weight: 700;
+    color: hsl(184, 14%, 56%);
+}
+.inputField img{
+    top: 1.8rem;
+    left: .4rem;
+    z-index: 2;
+}
+.inputField:nth-child(1){
+    margin-bottom: 1.5rem;
+}
+#tip{
+    font-size: .7rem;
+    color: hsl(184, 14%, 56%);
+}
+.buttons{
+    display: grid;
+    grid-template-columns:calc(92%/3) calc((92%/3)) calc(92%/3);
+    gap: .5rem;
+    margin: .5rem 0 2rem 0;
+}
+.btn{
+    background-color: hsl(183, 100%, 15%);
+    text-align: center;
+    color: hsl(0,0%,100%);
+    padding: .4rem;
+    border-radius: .2rem;
+    transition:all 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color:hsl(187, 64%, 65%);
+    cursor: pointer;
+}
+.inpt{
+    border-radius: .2rem;
+    background-color:hsl(189, 41%, 97%);
+}
+.inpt input{
+    width: 100%;
+    height: 100%;
+    font-size: .9rem;
+    border: none;
+    outline-color: hsl(172, 67%, 45%);
+    background: transparent;
+    padding: .3rem;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+    font-weight: bold;
+}
+.subcontainer2{
+    background-color: hsl(183, 100%, 15%);
+    padding: 1rem;
+    border-radius: .6rem;
+}
+.tip-board, .total-board{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+.subcontainer2 h4{
+    color: hsl(0,0%,100%);
+    font-size: .6rem;
+}
+.subcontainer2 h4 span{
+    color: hsl(184, 14%, 56%);
+    font-size: .5rem;
+}
+.tip-el,.total-el{
+    color: hsl(172, 67%, 45%);
+    font-size: 1.4rem;
+}
+.reset{
+    width: 100%;
+    padding: .5rem;
+    background-color: hsla(186, 72%, 45%, 0.253);
+    border: none;
+    font-weight: 900;
+    color: hsla(183, 61%, 18%, 0.349);
+    font-size: 1rem;
+    border-radius: .2rem;
+    margin-top: 5rem;
+    transition: all 0.3s linear;
+}
+.reset:hover{
+    background-color: hsl(186, 91%, 87%);
+    cursor: pointer;
+}
+.active{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.error{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: .7rem;
+    color: tomato;
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+@media screen and (max-width:768px) {
+    .container{
+        display: block;
+    }
+    .subcontainer1{
+        margin-bottom: 1.5rem;
+    }
+    .subcontainer2{
+        height: 240px;
+    }
+    .reset{
+        margin-top: auto;
+    }
+}
